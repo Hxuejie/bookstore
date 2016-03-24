@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC
+ 	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+ 	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <constant name="struts.devMode" value="true" />
+    
+	<package name="user" namespace="/user" extends="struts-default">
+	    
+		<action name="login" class="com.hxj.web.bookstore.user.action.UserLoginAction">
+			<result name="success">/user/login_success.jsp</result>
+			<result name="error">/user/login_fail.jsp</result>
+		</action>
+		<action name="register" class="com.hxj.web.bookstore.user.action.UserRegisterAction">
+			<result name="success">/user/register_success.jsp</result>
+			<result name="error">/user/register_fail.jsp</result>
+		</action>
+	</package>
+	
+	<package name="store" namespace="/store" extends="struts-default">
+	    
+	    <global-results>
+	        <result name="error">/error.jsp</result>
+	    </global-results>
+	    
+		<action name="booklist" class="com.hxj.web.bookstore.store.action.BookListAction">
+			<result name="success">/store/book_list.jsp</result>
+		</action>
+		<action name="bookdesc" class="com.hxj.web.bookstore.store.action.BookDescAction">
+			<result name="success">/store/book_desc.jsp</result>
+		</action>
+		<action name="addbook" class="com.hxj.web.bookstore.store.action.AddBookAction">
+			<result name="success" type="redirectAction">booklist</result>
+		</action>
+		<action name="delbook" class="com.hxj.web.bookstore.store.action.DeleteBookAction">
+			<result name="success" type="redirectAction">booklist</result>
+		</action>
+		<action name="updatebook" class="com.hxj.web.bookstore.store.action.UpdateBookAction">
+			<result name="success" type="redirectAction">booklist</result>
+		</action>
+		<action name="editbook" class="com.hxj.web.bookstore.store.action.EditBookAction">
+		    <result name="success">/store/book_edit.jsp</result>
+		</action>
+		<action name="cart" class="com.hxj.web.bookstore.store.action.CartListAction">
+		    <result name="success">/store/cart_list.jsp</result>
+		</action>
+		<action name="cartRemove" class="com.hxj.web.bookstore.store.action.CartRemoveAction">
+		    <result name="success" type="redirectAction">cart</result>
+		</action>
+		<action name="cartAdd" class="com.hxj.web.bookstore.store.action.CartAddAction">
+		    <result name="success" type="redirectAction">booklist</result>
+		</action>
+		<action name="*">
+		    <result>/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>
