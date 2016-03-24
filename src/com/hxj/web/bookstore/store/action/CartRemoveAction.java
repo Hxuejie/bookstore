@@ -25,7 +25,7 @@ public class CartRemoveAction extends ActionSupport {
 			return ERROR;
 		} 
 		cart = (List<Integer>) session.get("cart");
-		cart.remove(bookID);
+		cart.remove(Integer.valueOf(bookID));
 		return SUCCESS;
 	}
 
