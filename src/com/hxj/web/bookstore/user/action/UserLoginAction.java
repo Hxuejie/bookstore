@@ -2,6 +2,7 @@ package com.hxj.web.bookstore.user.action;
 
 import com.hxj.web.bookstore.user.bean.User;
 import com.hxj.web.bookstore.user.dao.UserDao;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -43,6 +44,7 @@ public class UserLoginAction extends ActionSupport {
 		if (user == null) {
 			return ERROR;
 		}
+		ActionContext.getContext().getSession().put("userID", user.getId());
 		return SUCCESS;
 	}
 }

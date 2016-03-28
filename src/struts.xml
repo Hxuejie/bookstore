@@ -52,6 +52,9 @@
 		<action name="cartAdd" class="com.hxj.web.bookstore.store.action.CartAddAction">
 		    <result name="success" type="redirectAction">booklist</result>
 		</action>
+		<action name="createOrder" class="com.hxj.web.bookstore.store.action.CreateOrderAction">
+		    <result name="success">/store/order_success.jsp</result>
+		</action>
 		<action name="*">
 		    <result>/error.jsp</result>
 		</action>

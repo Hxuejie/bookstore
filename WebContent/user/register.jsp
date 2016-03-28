@@ -19,6 +19,18 @@
 				<td><input name="password" type="password"></td>
 			</tr>
 			<tr>
+				<td>手机:</td>
+				<td><input name="phone" type="text"></td>
+			</tr>
+			<tr>
+				<td>地址:</td>
+				<td><input name="address" type="text"></td>
+			</tr>
+			<tr>
+				<td>email:</td>
+				<td><input name="email" type="text"></td>
+			</tr>
+			<tr>
 				<td colspan="2" align="center">
 					<input type="submit" value="注册">
 				</td>

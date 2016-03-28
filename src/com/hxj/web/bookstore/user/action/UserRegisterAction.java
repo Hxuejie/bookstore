@@ -16,6 +16,9 @@ public class UserRegisterAction extends ActionSupport {
 
 	private String				username;
 	private String				password;
+	private String				phone;
+	private String				address;
+	private String				email;
 
 	private UserDao				userDao				= new UserDao();
 
@@ -27,6 +30,9 @@ public class UserRegisterAction extends ActionSupport {
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);
+		user.setPhone(phone);
+		user.setAddress(address);
+		user.setEmail(email);
 		userDao.addUser(user);
 		return SUCCESS;
 	}
@@ -45,6 +51,30 @@ public class UserRegisterAction extends ActionSupport {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
