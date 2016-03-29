@@ -43,6 +43,7 @@
 </table>
 <br>
 <br>
+<s:a action="createOrder" namespace="/store">结算</s:a>
 
 </body>
 </html>

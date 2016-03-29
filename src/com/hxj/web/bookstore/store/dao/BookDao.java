@@ -23,7 +23,7 @@ public class BookDao extends BaseDao {
 	 */
 	public List<Book> getAllSelling() {
 		try {
-			ResultSet set = db.select("select * from books where state=1");
+			ResultSet set = db.select("select * from t_books where state=1");
 			List<Book> list = new ArrayList<Book>();
 			while (set.next()) {
 				Book book = createBookObject(set);
@@ -45,7 +45,7 @@ public class BookDao extends BaseDao {
 	 */
 	public Book findSellingByID(int id) throws DaoException {
 		try {
-			ResultSet set = db.select("select * from books where id = " + id);
+			ResultSet set = db.select("select * from t_books where id = " + id);
 			if (!set.next()) {
 				return null;
 			}
@@ -65,7 +65,7 @@ public class BookDao extends BaseDao {
 	public List<Book> findSellingByName(String name) throws DaoException {
 		List<Book> list = new ArrayList<Book>();
 		try {
-			ResultSet set = db.select("select * from books where name like '" + name + "'");
+			ResultSet set = db.select("select * from t_books where name like '" + name + "'");
 			while (set.next()) {
 				list.add(createBookObject(set));
 			}
@@ -85,7 +85,7 @@ public class BookDao extends BaseDao {
 	public List<Book> findSellingByAll(String keyword) throws DaoException {
 		List<Book> list = new ArrayList<Book>();
 		try {
-			ResultSet set = db.select("select * from books where find_in_set('" + keyword
+			ResultSet set = db.select("select * from t_books where find_in_set('" + keyword
 					+ "',name) or " + "find_in_set('" + keyword + "',author)");
 			while (set.next()) {
 				list.add(createBookObject(set));
@@ -104,7 +104,7 @@ public class BookDao extends BaseDao {
 	 */
 	public void addBook(Book book) throws DaoException {
 		try {
-			db.insert(String.format("insert into books values (null,'%s','%s',%f,'%s','%s',1)",
+			db.insert(String.format("insert into t_books values (null,'%s','%s',%f,'%s','%s',1)",
 					book.getName(), book.getAuthor(), book.getPrice(), book.getDesc(),
 					book.getPicture()));
 		} catch (SQLException e) {
@@ -121,7 +121,7 @@ public class BookDao extends BaseDao {
 	public void updateBook(Book book) throws DaoException {
 		try {
 			db.update(String.format(
-					"update books set name='%s',author='%s',price=%f,`desc`='%s',picture='%s' where id=%d",
+					"update t_books set name='%s',author='%s',price=%f,`desc`='%s',picture='%s' where id=%d",
 					book.getName(), book.getAuthor(), book.getPrice(), book.getDesc(),
 					book.getPicture(), book.getId()));
 		} catch (SQLException e) {
@@ -137,7 +137,7 @@ public class BookDao extends BaseDao {
 	 */
 	public void deleteBook(int bookID) throws DaoException {
 		try {
-			db.insert("update books set state=0 where id=" + bookID);
+			db.insert("update t_books set state=0 where id=" + bookID);
 		} catch (SQLException e) {
 			throw new DaoException("insert book error,bookID=" + bookID, e);
 		}

@@ -28,7 +28,7 @@ public class CreateOrderAction extends ActionSupport {
 		if (cart.isEmpty()) {
 			return ERROR;
 		}
-		int userID = Integer.parseInt(session.get("userID").toString());
+		int userID = (Integer)session.get("userID");
 		orderDao.createOrder(userID, cart);
 
 		return SUCCESS;

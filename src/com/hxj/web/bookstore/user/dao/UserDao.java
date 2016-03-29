@@ -9,7 +9,7 @@ import com.hxj.web.bookstore.user.bean.User;
 public class UserDao extends BaseDao {
 	public void addUser(User user) {
 		try {
-			db.insert(String.format("insert into users values(null,%s,%s,%s,%s,%s)",
+			db.insert(String.format("insert into t_users values(null,%s,%s,%s,%s,%s)",
 					user.getUsername(), user.getPassword(), user.getPhone(), user.getAddress(),
 					user.getEmail()));
 		} catch (SQLException e) {
@@ -20,7 +20,7 @@ public class UserDao extends BaseDao {
 	public User loginUser(String username, String password) {
 		try {
 			ResultSet ret = db.select(
-					String.format("select * from users where username='%s' and password='%s'",
+					String.format("select * from t_users where username='%s' and password='%s'",
 							username, password));
 			if (ret.next()) {
 				return createUserObject(ret);
