@@ -5,14 +5,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="css/base.css" rel="stylesheet" type="text/css"/>
+<link href="../css/base.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+.userName{
+	color: red;
+}
+</style>
 <title>登录成功</title>
 </head>
 <body>
-<img src="../res/success.png">登录成功！<br>
+<div  class="center">
+<img src="../res/success.png"/><p class="label" >登录成功！</p>
+<p class="label" >登录名：<font class="userName"><s:property value="username"/></font></p>
 <br>
-登录名：<s:property value="username"/><br>
-<br>
-<a href='<s:url action="booklist" namespace="/store"/>'>获取书籍列表</a>
+<a href='<s:url action="booklist" namespace="/store"/>'>进入书籍列表</a>
+</div>
 </body>
 </html>

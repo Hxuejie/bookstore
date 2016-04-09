@@ -1,0 +1,24 @@
+/*-------------*/
+/* 用户登录界面CSS */
+/*-------------*/
+
+/* 登录按钮 */
+.loginBtn {
+	margin-left: 20px;
+	background-color: orange;
+	border-width: 0px;
+	color: white;
+}
+
+/* 用户输入框  */
+.inputFrame {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+/* 注册 */
+.reg {
+	color: blue;
+}
+

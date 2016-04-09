@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../css/base.css" rel="stylesheet" type="text/css"/>
 <title>网上书店</title>
 </head>
 <body>

@@ -6,31 +6,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="css/base.css" rel="stylesheet" type="text/css"/>
+<link href="css/login.css" rel="stylesheet" type="text/css"/>
 <title>用户登录</title>
 </head>
 <body>
 	<div class="center">
+	<!-- LOGO -->
 	<img src="res/logo.png">
 	<br>
 	<s:form action="login" namespace="/user"  method="post">
-		<table>
+		<table class="inputFrame">
+			<!-- 用户名 -->
 			<tr>
 				<td class="label">用户名:</td>
 				<td><input name="username" type="text"></td>
 			</tr>
+			<!-- 密码 -->
 			<tr>
 				<td class="label" align="right">密码:</td>
 				<td><input name="password" type="password"></td>
 			</tr>
+			<!-- 登录、注册 -->
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="登录">
+					<s:a class="reg" type="button" href="user/register.jsp">注册</s:a>
+					<input class="loginBtn" type="submit" value="登录">
 				</td>
 			</tr>
 		</table>
 	</s:form>
 	<br>
-	<s:a href="user/register.jsp">注册</s:a>
 	</div>
 </body>
 </html>
