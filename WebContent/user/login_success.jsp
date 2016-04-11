@@ -14,11 +14,11 @@
 <title>登录成功</title>
 </head>
 <body>
-<div  class="center">
-<img src="../res/success.png"/><p class="label" >登录成功！</p>
-<p class="label" >登录名：<font class="userName"><s:property value="username"/></font></p>
-<br>
-<a href='<s:url action="booklist" namespace="/store"/>'>进入书籍列表</a>
-</div>
+	<div  class="center">
+		<img src="../res/success.png"/><p class="label" >登录成功！</p>
+		<p class="label" >登录名：<font class="userName"><s:property value="username"/></font></p>
+		<br>
+		<a href='<s:url action="booklist" namespace="/store"/>'>进入书籍列表</a>
+	</div>
 </body>
 </html>

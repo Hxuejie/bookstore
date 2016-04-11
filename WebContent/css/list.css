@@ -1,0 +1,60 @@
+/*-----------*/
+/* 主页－书籍列表  */
+/*-----------*/
+
+/* LOGO */
+.logo{
+	margin-left: 25px;
+	margin-top: 15px;
+}
+
+/* 搜索栏 */
+.searchBar{
+margin-left:auto;
+margin-right:auto;
+width: 40%;
+}
+
+/* 搜索按钮 */
+.searchBtn{
+	background-color: orange;
+	border-width: 0px;
+	height: 30px;
+	margin-left: 5px;
+	color: white;
+}
+
+/* 购物车 */
+.cart{
+	float:right;
+	position:fixed;
+	left: 10px;
+	top: 10px;
+	margin-right: 100px
+}
+
+/* 书籍列表 */
+.list{
+	margin: auto;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+.list tr th,td {
+	border: 0px;
+	border-style: none;
+	border-color: #0080ff;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.list img {
+	width: 100px;
+	height: 140px;	
+}
+.price{
+	color: #ff80c0;
+}
+
+
