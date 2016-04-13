@@ -5,17 +5,54 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../css/base.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+.center{
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	background-color: #408080;
+}
+.pic{
+	width: 170px;
+	height: 210px;
+}
+.icon{
+	float: left;
+	width: 200px;
+}
+.desc{
+	float: left;
+	width: 400px;
+}
+.addCart{
+	background-color: red;
+	border-radius: 3px;
+	border-style: none;
+	color: white;
+	padding: 5px;
+}
+p{
+color: white;
+}
+</style>
 <title>书籍介绍</title>
 </head>
 <body>
-
-书箱名称：<s:property value="book.name"/><br>
-<br>
-书籍作者：<s:property value="book.author"/><br>
-<br>
-书籍价格：<s:property value="book.price"/><br>
-<br>
-书籍介绍：<s:property value="book.desc"/>
+<div class="center">
+<p>书籍 > <s:property value="book.name"/> </p>
+	<div class="icon">
+		<img class="pic" src='<s:property value="book.picture"/>'> 
+	</div>
+	<div class="desc">
+		<p>书箱名称：<s:property value="book.name"/></p>
+		<p>书籍作者：<s:property value="book.author"/></p>
+		<p>书籍价格：<s:property value="book.price"/></p>
+		<p>书籍介绍：<s:property value="book.desc"/></p>
+		<button class="addCart">加入购物车</button>
+	</div>
+</div>
 
 </body>
 </html>

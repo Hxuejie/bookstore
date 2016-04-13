@@ -1,0 +1,25 @@
+.cartCenter{
+	margin: auto;
+	width: 620px;
+}
+p{
+	color: white;
+}
+table.altrowstable {
+	color:white;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}

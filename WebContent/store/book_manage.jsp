@@ -20,10 +20,6 @@
 			<button class="searchBtn" type="submit">搜索</button>
 		</s:form>
 	</div>
-	<!-- 购物车 -->
-	<div class="cart">
-		<img width="50px" height="50px" alt="购物车" src="../res/cart.jpg"><s:a action="cart" namespace="/store">购物车</s:a>
-	</div>
 	<!-- 书籍列表 -->	
 	<br>
 	<br>
@@ -34,7 +30,7 @@
 			<th class="label">书籍名称</th>
 			<th class="label">作者</th>
 			<th class="label">价格</th>
-			<th class="label">操作</th>
+			<th class="label">管理</th>
 		</tr>
 		<s:iterator value="bookList" id="book" status="i">
 			<tr>
@@ -51,10 +47,13 @@
 				</td>
 				<td> <s:property value="author"/> </td>
 				<td class="price"> <s:property value="price"/> </td>
-				<td> 
-					 <s:a action="cartAdd" namespace="/store">
+				<td> <s:a action="delbook" namespace="/store">
+						<s:param name="bookID"><s:property value="id"/></s:param>
+						删除
+					 </s:a>  
+					 <s:a action="editbook" namespace="/store">
 					 	<s:param name="bookID"><s:property value="id"/></s:param>
-					 	添加到购物车
+					 	修改
 					 </s:a> 
 				</td>
 			</tr>
@@ -62,7 +61,7 @@
 	</table>
 	<br>
 	<br>
-	<s:a action="bookmanage" namespace="/store">书籍管理</s:a>
+	<a href="book_add.jsp">添加书籍</a>
 
 </body>
 </html>

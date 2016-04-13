@@ -28,6 +28,9 @@
 		<action name="booklist" class="com.hxj.web.bookstore.store.action.BookListAction">
 			<result name="success">/store/book_list.jsp</result>
 		</action>
+		<action name="bookmanage" class="com.hxj.web.bookstore.store.action.BookManageAction">
+			<result name="success">/store/book_manage.jsp</result>
+		</action>
 		<action name="bookdesc" class="com.hxj.web.bookstore.store.action.BookDescAction">
 			<result name="success">/store/book_desc.jsp</result>
 		</action>

@@ -9,7 +9,7 @@ import com.hxj.web.bookstore.user.bean.User;
 public class UserDao extends BaseDao {
 	public void addUser(User user) {
 		try {
-			db.insert(String.format("insert into t_users values(null,%s,%s,%s,%s,%s)",
+			db.insert(String.format("insert into t_users values(null,'%s','%s','%s','%s','%s')",
 					user.getUsername(), user.getPassword(), user.getPhone(), user.getAddress(),
 					user.getEmail()));
 		} catch (SQLException e) {

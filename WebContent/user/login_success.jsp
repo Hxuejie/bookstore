@@ -10,6 +10,15 @@
 .userName{
 	color: red;
 }
+
+/* 居中  */
+.center { 
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	width:400px; 
+	height:100px;
+}
 </style>
 <title>登录成功</title>
 </head>

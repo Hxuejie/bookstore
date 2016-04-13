@@ -27,7 +27,6 @@ width: 40%;
 /* 购物车 */
 .cart{
 	float:right;
-	position:fixed;
 	left: 10px;
 	top: 10px;
 	margin-right: 100px
@@ -36,9 +35,6 @@ width: 40%;
 /* 书籍列表 */
 .list{
 	margin: auto;
-	border-width: 1px;
-	border-color: #a9c6c9;
-	border-collapse: collapse;
 }
 .list tr th,td {
 	border: 0px;

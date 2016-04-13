@@ -5,9 +5,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../css/base.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+.center{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+	width:700px;
+}
+td{
+color:white;
+}
+input{
+width:300px;
+height:50px;
+}
+</style>
 <title>添加书籍</title>
 </head>
 <body>
+<div class="center">
 	<s:form action="addbook" namespace="/store"  method="get">
 		<table>
 			<tr>
@@ -38,5 +55,6 @@
 			</tr>
 		</table>
 	</s:form>
+	</div>
 </body>
 </html>
